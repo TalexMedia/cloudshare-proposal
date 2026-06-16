@@ -756,7 +756,7 @@ body{background:var(--bg);min-height:100vh}
   </div>
   <div class="benefit-item">
     <div class="benefit-title">Built To Be Repeatable</div>
-    <div class="benefit-desc">The playbook is what makes this last, turning video from a one-off scramble into a system your team can run, hand off, and keep using long after the three months are up.</div>
+    <div class="benefit-desc">The playbook turns video from a one-off scramble into a system your team can run, hand off, and keep using long after the three months are up.</div>
   </div>
   <div class="benefit-item">
     <div class="benefit-title">People, Not Metrics</div>
@@ -772,10 +772,53 @@ body{background:var(--bg);min-height:100vh}
 
   <hr class="rule-orange"/>
 
-  <!-- ══════════ 08 CASE STUDIES (SOCIAL PROOF) ══════════ -->
+  <!-- ══════════ CTA / ACCEPTANCE FLOW ══════════ -->
+  <div class="cta-block">
+    <div class="cta-eyebrow">The Next Step</div>
+    <h2 class="disp cta-headline">Ready to Build Your Legend?</h2>
+    <p class="cta-sub">Accepting this proposal takes two steps.</p>
+
+    <div class="accept-flow" id="accept-flow">
+
+      <div class="accept-step is-active" data-step="1" id="step-accept">
+        <div class="as-num"><span class="as-num-txt">1</span></div>
+        <div class="as-body">
+          <div class="as-title">Accept Proposal</div>
+          <div class="as-desc">I'd like to move forward with:</div>
+          <select id="tier-select" class="tier-select" aria-label="Choose what to accept" onchange="resetAcceptFlow()">
+            <option value="engagement-8">Monthly engagement · 8 videos · $6,500/mo</option>
+            <option value="engagement-12-committed">Monthly engagement · 12 videos committed · $8,300/mo</option>
+            <option value="engagement-12-m2m">Monthly engagement · 12 videos month-to-month · $8,500/mo</option>
+            <option value="explainer">Standalone explainer video · $10,000</option>
+            <option value="engagement-plus-explainer">Engagement + explainer video</option>
+            <option value="custom">I'd like a completely custom project</option>
+          </select>
+        </div>
+        <button type="button" class="as-action" onclick="acceptProposal()">Accept</button>
+      </div>
+
+      <div class="accept-step is-locked" data-step="2" id="step-book">
+        <div class="as-num"><span class="as-num-txt">2</span></div>
+        <div class="as-body">
+          <div class="as-title">Book Onboarding Call</div>
+          <div class="as-desc">Confirm deliverables and finalize the details on a call with Tom.</div>
+        </div>
+        <a class="as-action" href="https://calendly.com/talextom/talex-onboarding-meeting" target="_blank" rel="noopener" onclick="markBooked()">Book →</a>
+      </div>
+
+    </div>
+
+    <div class="cta-escape">
+      <div class="cta-escape-label">Still thinking it through?</div>
+      <a class="cta-escape-btn" href="https://calendly.com/talextom/touching-base" target="_blank" rel="noopener">Book a 15-min call with Tom →</a>
+    </div>
+  </div>
+
+  <hr class="rule-orange"/>
+
+  <!-- ══════════ CASE STUDIES (SOCIAL PROOF · BELOW CTA) ══════════ -->
   <div style="margin-bottom:1.25rem">
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:0.4rem">
-      <span class="step-pill" style="background:var(--txt);font-size:10px">08</span>
       <span class="lbl" style="color:var(--txt3)">Results That Speak</span>
     </div>
     <h2 class="head" style="font-size:22px;color:var(--txt);margin-bottom:0.25rem">Proof · Three Industries, One Outcome</h2>
@@ -879,48 +922,6 @@ body{background:var(--bg);min-height:100vh}
       <div class="cs-section-body">In August 2025, Elizabeth Seton Children's broke ground on their new 96-bed young adult center in White Plains, NY, the first standalone facility of its kind in the United States, providing care for young adults aged 18 to 35 with complex medical needs. The facility is expected to open in January 2028.</div>
     </div>
     <div class="cs-footer-meta">First standalone young adult complex-care facility in the U.S. · 96 beds · $156M · Groundbreaking Aug 2025</div>
-  </div>
-
-  <!-- ══════════ CTA / ACCEPTANCE FLOW ══════════ -->
-  <div class="cta-block">
-    <div class="cta-eyebrow">The Next Step</div>
-    <h2 class="disp cta-headline">Ready to Build Your Legend?</h2>
-    <p class="cta-sub">Accepting this proposal takes two steps.</p>
-
-    <div class="accept-flow" id="accept-flow">
-
-      <div class="accept-step is-active" data-step="1" id="step-accept">
-        <div class="as-num"><span class="as-num-txt">1</span></div>
-        <div class="as-body">
-          <div class="as-title">Accept Proposal</div>
-          <div class="as-desc">I'd like to move forward with:</div>
-          <select id="tier-select" class="tier-select" aria-label="Choose what to accept" onchange="resetAcceptFlow()">
-            <option value="engagement-8">Monthly engagement · 8 videos · $6,500/mo</option>
-            <option value="engagement-12-committed">Monthly engagement · 12 videos committed · $8,300/mo</option>
-            <option value="engagement-12-m2m">Monthly engagement · 12 videos month-to-month · $8,500/mo</option>
-            <option value="explainer">Standalone explainer video · $10,000</option>
-            <option value="engagement-plus-explainer">Engagement + explainer video</option>
-            <option value="custom">I'd like a completely custom project</option>
-          </select>
-        </div>
-        <button type="button" class="as-action" onclick="acceptProposal()">Accept</button>
-      </div>
-
-      <div class="accept-step is-locked" data-step="2" id="step-book">
-        <div class="as-num"><span class="as-num-txt">2</span></div>
-        <div class="as-body">
-          <div class="as-title">Book Onboarding Call</div>
-          <div class="as-desc">Confirm deliverables and finalize the details on a call with Tom.</div>
-        </div>
-        <a class="as-action" href="https://calendly.com/talextom/talex-onboarding-meeting" target="_blank" rel="noopener" onclick="markBooked()">Book →</a>
-      </div>
-
-    </div>
-
-    <div class="cta-escape">
-      <div class="cta-escape-label">Still thinking it through?</div>
-      <a class="cta-escape-btn" href="https://calendly.com/talextom/touching-base" target="_blank" rel="noopener">Book a 15-min call with Tom →</a>
-    </div>
   </div>
 
   <!-- ══════════ FOOTER ══════════ -->
